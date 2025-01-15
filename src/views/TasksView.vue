@@ -1,12 +1,9 @@
 <template>
-  <div>
+
     <h1>Feladatok Listája</h1>
     <button @click="clearAllTasks" class="clear-button">Összes törlése</button>
-    <div>
+    <div id="tasks">
       <div v-for="task in tasks" :key="task.id" class="task-item">
-        <!--<form>
-          
-        </form>-->
         <div id="card">
           <h3>{{ task.title }}</h3><br>
           <p>{{ task.desc }}</p><br>
@@ -22,7 +19,8 @@
         </div>
       </div>
     </div>
-  </div>
+    
+
 </template>
 
 <script>
@@ -59,6 +57,14 @@ export default {
 </script>
 
 <style scoped>
+#tasks{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
 #grid{
   display: grid;
 }
