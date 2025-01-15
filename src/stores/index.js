@@ -26,8 +26,9 @@ export const useTaskStore = defineStore('taskStore', {
       }
     },
     deleteTask(id) {
-      this.tasks = this.tasks.filter(task => task.id !== id); // Task törlése ID alapján
+      this.tasks = this.tasks.filter(task => task.id !== id);
       this.saveTasks();
+        
     },
     saveTasks() {
       localStorage.setItem('tasks', JSON.stringify(this.tasks));

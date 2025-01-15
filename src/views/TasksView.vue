@@ -37,6 +37,7 @@ export default {
     const deleteTask = (id) => {
       if (confirm('Biztosan törölni szeretnéd ezt a feladatot?')) {
         taskStore.deleteTask(id);
+        location.reload();
       }
     };
 
@@ -228,13 +229,13 @@ ul {
   list-style-type: none;
 }
 #card{
-  /*display: grid;*/
   background-color: rgb(170, 170, 170);
   border: solid 1px rgb(0, 0, 0);
   border-radius: 10px;
   padding: 15px;
   margin-bottom: 10px;  
   width: 200px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .task-item{
